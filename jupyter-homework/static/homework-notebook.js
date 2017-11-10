@@ -29,8 +29,8 @@ define(function() {
     require(['base/js/events'], function(events) {
       // for some reason, we miss the notebook_loaded event for large notebooks
       // so the kernel hook is our safety
-      events.on("kernel_ready.Kernel", load_gallery_notebook);
-      events.on("notebook_loaded.Notebook", load_gallery_notebook);
+      events.on("kernel_ready.Kernel", load_homework_notebook);
+      events.on("notebook_loaded.Notebook", load_homework_notebook);
     });
   };
 

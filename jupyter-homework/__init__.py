@@ -9,7 +9,7 @@ def _jupyter_nbextension_paths():  # pragma: no cover
         'section': "tree",
         'src': "static",
         'dest': "jupyter-homework",
-        'require': 'jupyter-nbgallery/homework-tree'
+        'require': 'jupyter-homework/homework-tree'
       },{
         'section': "common",
         'src': "static",

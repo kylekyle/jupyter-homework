@@ -5,7 +5,7 @@ define(function() {
       config.load();
       
       config.loaded.then(function() {
-        var nbgallery = config['data'].homework;
+        var homework = config['data'].homework;
         var base = homework.url;
         console.log("loading homework-tree integration from " + base);
         require([base + "/integration/homework-tree.js"]);
