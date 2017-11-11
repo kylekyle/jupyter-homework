@@ -31,4 +31,29 @@ jupyter nbextension enable jupyter-homework --py
 
 # Deploying
 
-A good walkthrough for deploying to PyPi can be found here: http://peterdowns.com/posts/first-time-with-pypi.html
+Register at https://pypi.org/ and save your credentials to `~/.pypirc`:
+
+```
+[pypi]
+username:<username>
+password:<password>
+```
+
+Create the distribution: 
+
+```
+python setup.py sdist
+```
+
+Use twine to upload:
+
+```
+twine upload dist/*
+```
+
+Tag and push:
+
+```
+git tag <tag>
+git push origin <tag>
+```
