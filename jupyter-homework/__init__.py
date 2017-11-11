@@ -4,16 +4,16 @@ def _jupyter_nbextension_paths():  # pragma: no cover
         'section': "notebook",
         'src': "static",
         'dest': "jupyter-homework",
-        'require': 'jupyter-homework/homework-notebook'
+        'require': 'jupyter-homework/notebook'
       },{
         'section': "tree",
         'src': "static",
         'dest': "jupyter-homework",
-        'require': 'jupyter-homework/homework-tree'
+        'require': 'jupyter-homework/tree'
       },{
         'section': "common",
         'src': "static",
         'dest': "jupyter-homework",
-        'require': 'jupyter-homework/homework-common'
+        'require': 'jupyter-homework/common'
       }
     ]

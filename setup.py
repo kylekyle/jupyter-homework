@@ -26,5 +26,6 @@ setup(
     author_email='kylejking@gmail.com',
     license='MIT',
     packages=['jupyter-homework'],
+    install_requires=['nbopen'],
     include_package_data=True
 )
