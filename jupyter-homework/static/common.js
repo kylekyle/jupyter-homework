@@ -25,7 +25,7 @@ define(function() {
     });
   };
 
-  var attach_menu = function(script,callback) {
+  var attach_menu = function(callback) {
     config(function(conf) {
       require(['nbextensions/jupyter-homework/bootbox.min'], function(bootbox) {
         var configure = $('<li/>')
@@ -58,21 +58,21 @@ define(function() {
           .append(message);
 
         var menu = $('<ul/>')
-          .attr('id','#hwMenu')
+          .attr('id','hwMenu')
           .addClass('dropdown-menu')
           .append(configure)
           .append(status);
 
-        callback(menu);
-
-        hook(script, 
-          function() {
-            $('#hwStatus').remove();
-          },function() {
-            $('#hwStatus .message')
-              .addClass('alert-danger')
-              .text('Homework server unreachable')
-          });
+        callback(menu, function(script) {
+          hook(script, 
+            function() {
+              $('#hwStatus').remove();
+            },function() {
+              $('#hwStatus .message')
+                .addClass('alert-danger')
+                .text('Homework server unreachable')
+            });
+        });
       });
     });
   };

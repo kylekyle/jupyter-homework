@@ -2,7 +2,7 @@ define(function() {
   return {
     load_ipython_extension: function() {
       require(['nbextensions/jupyter-homework/common'], function(homework) {
-        homework.attach_menu('tree', function(menu) {
+        homework.attach_menu(function(menu, trigger_hook) {
           var title = $('<button/>')
             .addClass('dropdown-toggle btn btn-default btn-xs')
             .attr('data-toggle', 'dropdown')
@@ -15,6 +15,7 @@ define(function() {
             .append(menu);
 
           $('.tree-buttons .pull-right').prepend(dropdown);
+          trigger_hook('tree');
         });
       });
     }
